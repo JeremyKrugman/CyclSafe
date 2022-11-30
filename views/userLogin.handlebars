@@ -1,0 +1,23 @@
+{{!-- Incomplete!! Just putting the commit for now --}}
+<article> 
+  <form action="/login" method="POST" class="search-name-form" id="login-form">
+    <label for="usernameInput">
+      Username
+      <br>
+      <input id="usernameInput" type="text" name="usernameInput"/>
+    </label>
+    <p>{{userErr}}</p>
+    <label for="passwordInput">
+      Password
+      <br>
+      <input id="passwordInput" type="password" name="passwordInput"/>
+    </label>
+    <p>{{passwordErr}}</p>
+    <button type="submit">Login</button>
+  
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='../public/js/loginCheck.js'></script>
+  
+  <p><a href="/register">Click here to register!</a></p>
+</article>
