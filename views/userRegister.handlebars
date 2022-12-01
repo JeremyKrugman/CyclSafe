@@ -1,23 +1,32 @@
-{{!-- Incomplete!! Just putting the commit for now --}}
+{{!-- This is just PURELY functional rn. Will make it look better once we decide on design --}}
 <article> 
-  <form action="/login" method="POST" class="search-name-form" id="login-form">
-    <label for="usernameInput">
+<form action="/login" method="POST" class="search-name-form" id="register-form">
+    <label for="usernameInput" id="usernameLabel">
       Username
       <br>
       <input id="usernameInput" type="text" name="usernameInput"/>
     </label>
-    <p>{{userErr}}</p>
+    <p id="usernameErr" class="error" hidden>Username must consist of 6 numbers and/or letters</p>
+    <br>
     <label for="passwordInput">
       Password
       <br>
       <input id="passwordInput" type="password" name="passwordInput"/>
     </label>
-    <p>{{passwordErr}}</p>
-    <button type="submit">Login</button>
+    <p id="passwordErr" class="error" hidden>Password must contain at least one uppercase letter, one number, and one special character</p>
+    <br>
+    <label for="passwordConfirm">
+      Confirm Password
+      <br>
+      <input id="passwordConfirm" type="password" name="passwordConfirm"/>
+    </label>
+    <p id="passwordConfirmErr" class="error" hidden>Must match password</p>
+    <button type="submit">Register</button>
   
   </form>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src='../public/js/loginCheck.js'></script>
+  <script src="../public/js/validate.js"></script>
+  <script src='../public/js/registerCheck.js'></script>
   
-  <p><a href="/register">Click here to register!</a></p>
+  <p><a href="/login">Click here to login!</a></p>
 </article>
