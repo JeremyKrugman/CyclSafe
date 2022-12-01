@@ -14,8 +14,4 @@ const validatePassword = (password) =>{ //returns true if valid. returns false o
   const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.*[a-zA-Z]).{6,}$/; //Contains one number, one lowercase, one uppercase, and one special char, and is at least length 6
   return passRegex.test(password);
 }
-
-module.exports={
-  validateUsername,
-  validatePassword
-}
+//i do not module export here, because this is to be loaded client side. copy paste these functions into another thing
